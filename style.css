@@ -1,105 +1,70 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header .tagline p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+.calculator {
+    width: 300px;
     background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-#about img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.display {
+    padding: 20px;
+    font-size: 2rem;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    border-radius: 10px 10px 0 0;
 }
 
-#about .bio {
-    text-align: center;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: #444;
 }
 
-#skills ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-#skills ul li {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
     background-color: #333;
     color: #fff;
-    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#projects .project {
-    margin-bottom: 20px;
-}
-
-#projects .project img {
-    /* max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px; */
-    max-width: 150px;
-    border : 1px solid black;
-    margin-bottom: 20px;
-}
-
-#resume a {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-#resume a:hover {
+.btn:hover {
     background-color: #555;
 }
 
-#contact p {
-    text-align: center;
-    font-size: 1.2em;
+.operator {
+    background-color: #f39c12;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.operator:hover {
+    background-color: #e67e22;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1em;
+.equal {
+    grid-column: span 2;
+    background-color: #27ae60;
+}
+
+.equal:hover {
+    background-color: #2ecc71;
+}
+
+.clear {
+    background-color: #c0392b;
+}
+
+.clear:hover {
+    background-color: #e74c3c;
 }
